@@ -13,7 +13,7 @@ import java.util.List;
 public class ProfessorRepository {
 
     public Professor save(Professor professor) throws SQLException {
-        String sql = "INSERT INTO professor (nome, email, disciplina) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO professor (nome, email, disciplina) VALUES (?, ?, ?)";
 
         try(Connection connection = Conexao.conectar();
             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)){
@@ -80,7 +80,7 @@ public class ProfessorRepository {
 
     public Professor update(Professor professor) throws SQLException {
 
-        String sql = " UPDATE professor SET nome = ?, email = ?, disciplina = ?, WHERE id = ?";
+        String sql = "UPDATE professor SET nome = ?, email = ?, disciplina = ? WHERE id = ?";
 
         try(Connection connection = Conexao.conectar();
             PreparedStatement statement = connection.prepareStatement(sql)){

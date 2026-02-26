@@ -1,25 +1,26 @@
 package com.senai.gestao_escolar.controller;
 
-import com.senai.gestao_escolar.dto.aluno.AlunoRequest;
-import com.senai.gestao_escolar.dto.aluno.AlunoResponse;
-import com.senai.gestao_escolar.service.AlunoService;
+import com.senai.gestao_escolar.dto.professor.ProfessorRequest;
+import com.senai.gestao_escolar.dto.professor.ProfessorResponse;
+import com.senai.gestao_escolar.service.ProfessorService;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/gestao_escolar/aluno")
-public class AlunoController {
+@RequestMapping("/gestao_escolar/professor")
+public class ProfessorController {
 
-    private AlunoService service;
 
-    public AlunoController(AlunoService service) {
+    private ProfessorService service;
+
+    public ProfessorController(ProfessorService service) {
         this.service = service;
     }
 
     @PostMapping
-    public AlunoResponse save (@RequestBody AlunoRequest request){
+    public ProfessorResponse save (@RequestBody ProfessorRequest request){
         try {
             return service.save(request);
         } catch (SQLException e) {
@@ -28,7 +29,7 @@ public class AlunoController {
     }
 
     @GetMapping
-    public List<AlunoResponse> list (){
+    public List<ProfessorResponse> list (){
         try{
             return service.list();
         } catch (SQLException e) {
@@ -37,7 +38,7 @@ public class AlunoController {
     }
 
     @GetMapping("/{id}")
-    public AlunoResponse findById(@PathVariable Long id){
+    public ProfessorResponse findById(@PathVariable Long id){
         try {
             return service.findById(id);
         } catch (SQLException e) {
@@ -46,8 +47,8 @@ public class AlunoController {
     }
 
     @PutMapping("/{id}")
-    public AlunoResponse update(@PathVariable long id,
-                                @RequestBody AlunoRequest request){
+    public ProfessorResponse update(@PathVariable long id,
+                                @RequestBody ProfessorRequest request){
         try {
             return service.update(id, request);
         } catch (SQLException e) {

@@ -1,4 +1,9 @@
 package com.senai.gestao_escolar.dto.professor;
 
-public record ProfessorResponse() {
+public record ProfessorResponse(
+        long id,
+        String nome,
+        String email,
+        String disciplina
+) {
 }

@@ -3,11 +3,13 @@ package com.senai.gestao_escolar.repository;
 import com.senai.gestao_escolar.model.Professor;
 import com.senai.gestao_escolar.model.Professor;
 import com.senai.gestao_escolar.utils.Conexao;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class ProfessorRepository {
 
     public Professor save(Professor professor) throws SQLException {

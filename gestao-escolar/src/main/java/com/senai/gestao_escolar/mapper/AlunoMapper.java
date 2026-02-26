@@ -1,4 +1,4 @@
-package com.senai.gestao_escolar.mapper.aluno;
+package com.senai.gestao_escolar.mapper;
 
 import com.senai.gestao_escolar.dto.aluno.AlunoRequest;
 import com.senai.gestao_escolar.dto.aluno.AlunoResponse;

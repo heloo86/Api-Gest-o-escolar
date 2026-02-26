@@ -2,7 +2,7 @@ package com.senai.gestao_escolar.service;
 
 import com.senai.gestao_escolar.dto.aluno.AlunoRequest;
 import com.senai.gestao_escolar.dto.aluno.AlunoResponse;
-import com.senai.gestao_escolar.mapper.aluno.AlunoMapper;
+import com.senai.gestao_escolar.mapper.AlunoMapper;
 import com.senai.gestao_escolar.model.Aluno;
 import com.senai.gestao_escolar.repository.AlunoRepository;
 import org.springframework.stereotype.Service;
